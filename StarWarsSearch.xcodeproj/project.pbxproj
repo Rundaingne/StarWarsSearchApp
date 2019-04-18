@@ -93,6 +93,10 @@
 		F71A22472267D0EE00C2F0B1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F71A22352267D04C00C2F0B1 /* AppDelegate.swift */,
+				F71A223C2267D05100C2F0B1 /* Assets.xcassets */,
+				F71A223E2267D05100C2F0B1 /* LaunchScreen.storyboard */,
+				F71A22412267D05100C2F0B1 /* Info.plist */,
 				F71A22492267D10800C2F0B1 /* Stylization */,
 			);
 			path = Resources;
@@ -110,10 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				F71A227A22682BAD00C2F0B1 /* StyleGuide.swift */,
-				F71A22352267D04C00C2F0B1 /* AppDelegate.swift */,
-				F71A223C2267D05100C2F0B1 /* Assets.xcassets */,
-				F71A223E2267D05100C2F0B1 /* LaunchScreen.storyboard */,
-				F71A22412267D05100C2F0B1 /* Info.plist */,
 			);
 			path = Stylization;
 			sourceTree = "<group>";
