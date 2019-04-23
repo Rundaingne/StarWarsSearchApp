@@ -24,6 +24,11 @@
 		F76B74CE22690C78008BCC89 /* VehicleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74CD22690C78008BCC89 /* VehicleController.swift */; };
 		F76B74D022690C88008BCC89 /* PlanetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74CF22690C88008BCC89 /* PlanetController.swift */; };
 		F76B74D2226910D5008BCC89 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74D1226910D5008BCC89 /* constants.swift */; };
+		F76B74D622692156008BCC89 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76B74D522692156008BCC89 /* Default-568h@2x.png */; };
+		F76B74DE22694BFF008BCC89 /* SearchableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74DD22694BFF008BCC89 /* SearchableObject.swift */; };
+		F76B74E022694D59008BCC89 /* SearchableObjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74DF22694D59008BCC89 /* SearchableObjectController.swift */; };
+		F7CC72E2226B9CF400C5D45C /* SearchableObjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC72E1226B9CF400C5D45C /* SearchableObjectCollectionViewCell.swift */; };
+		F7CC72E4226BA21700C5D45C /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC72E3226BA21700C5D45C /* RoundedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		F76B74CD22690C78008BCC89 /* VehicleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleController.swift; sourceTree = "<group>"; };
 		F76B74CF22690C88008BCC89 /* PlanetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetController.swift; sourceTree = "<group>"; };
 		F76B74D1226910D5008BCC89 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		F76B74D522692156008BCC89 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F76B74DD22694BFF008BCC89 /* SearchableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableObject.swift; sourceTree = "<group>"; };
+		F76B74DF22694D59008BCC89 /* SearchableObjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableObjectController.swift; sourceTree = "<group>"; };
+		F7CC72E1226B9CF400C5D45C /* SearchableObjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableObjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7CC72E3226BA21700C5D45C /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,7 @@
 		F71A22292267D04C00C2F0B1 = {
 			isa = PBXGroup;
 			children = (
+				F76B74D522692156008BCC89 /* Default-568h@2x.png */,
 				F71A22342267D04C00C2F0B1 /* StarWarsSearch */,
 				F71A22332267D04C00C2F0B1 /* Products */,
 			);
@@ -78,6 +89,7 @@
 		F71A22342267D04C00C2F0B1 /* StarWarsSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F76B74DA22694A22008BCC89 /* Extensions */,
 				F76B74BA2268F1B2008BCC89 /* Notes.swift */,
 				F76B74BC2268F36F008BCC89 /* Model Controllers */,
 				F76B74732268EBE7008BCC89 /* Models */,
@@ -114,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				F71A227A22682BAD00C2F0B1 /* StyleGuide.swift */,
+				F7CC72E3226BA21700C5D45C /* RoundedImage.swift */,
 			);
 			path = Stylization;
 			sourceTree = "<group>";
@@ -121,6 +134,7 @@
 		F76B74732268EBE7008BCC89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F76B74DD22694BFF008BCC89 /* SearchableObject.swift */,
 				F76B74C12268F7E7008BCC89 /* Person.swift */,
 				F76B74BF2268F7D5008BCC89 /* Starship.swift */,
 				F76B74C32268F809008BCC89 /* Vehicle.swift */,
@@ -133,12 +147,28 @@
 		F76B74BC2268F36F008BCC89 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F76B74DF22694D59008BCC89 /* SearchableObjectController.swift */,
+				F76B74E32269565B008BCC89 /* LegacyControllers */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		F76B74DA22694A22008BCC89 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F76B74E32269565B008BCC89 /* LegacyControllers */ = {
+			isa = PBXGroup;
+			children = (
 				F76B74C922690C56008BCC89 /* PersonController.swift */,
 				F76B74CB22690C6A008BCC89 /* StarshipController.swift */,
 				F76B74CD22690C78008BCC89 /* VehicleController.swift */,
 				F76B74CF22690C88008BCC89 /* PlanetController.swift */,
 			);
-			path = "Model Controllers";
+			path = LegacyControllers;
 			sourceTree = "<group>";
 		};
 		F77CD1C62268DEE800CA59DF /* View Controllers */ = {
@@ -152,6 +182,7 @@
 		F77CD1C72268DEF800CA59DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7CC72E1226B9CF400C5D45C /* SearchableObjectCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71A22402267D05100C2F0B1 /* LaunchScreen.storyboard in Resources */,
+				F76B74D622692156008BCC89 /* Default-568h@2x.png in Resources */,
 				F71A223D2267D05100C2F0B1 /* Assets.xcassets in Resources */,
 				F71A223B2267D04C00C2F0B1 /* Main.storyboard in Resources */,
 			);
@@ -229,9 +261,13 @@
 			files = (
 				F76B74C22268F7E7008BCC89 /* Person.swift in Sources */,
 				F76B74B92268EF6B008BCC89 /* SearchPageViewController.swift in Sources */,
+				F7CC72E2226B9CF400C5D45C /* SearchableObjectCollectionViewCell.swift in Sources */,
+				F7CC72E4226BA21700C5D45C /* RoundedImage.swift in Sources */,
+				F76B74DE22694BFF008BCC89 /* SearchableObject.swift in Sources */,
 				F71A227B22682BAD00C2F0B1 /* StyleGuide.swift in Sources */,
 				F76B74D2226910D5008BCC89 /* constants.swift in Sources */,
 				F76B74C62268F814008BCC89 /* Planet.swift in Sources */,
+				F76B74E022694D59008BCC89 /* SearchableObjectController.swift in Sources */,
 				F71A22362267D04C00C2F0B1 /* AppDelegate.swift in Sources */,
 				F76B74CC22690C6A008BCC89 /* StarshipController.swift in Sources */,
 				F76B74CE22690C78008BCC89 /* VehicleController.swift in Sources */,
@@ -388,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q89A379BUF;
-				INFOPLIST_FILE = "$(SRCROOT)/AestheticsPractice/Resources/Stylization/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/StarWarsSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q89A379BUF;
-				INFOPLIST_FILE = "$(SRCROOT)/AestheticsPractice/Resources/Stylization/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/StarWarsSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

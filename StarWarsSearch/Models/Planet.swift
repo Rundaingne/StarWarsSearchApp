@@ -6,9 +6,9 @@
 //  Copyright © 2019 Rund LLC. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Planet: Codable {
+class Planet: SearchableObject, Codable {
     
     let name: String
     let diameter: String
@@ -30,6 +30,6 @@ class Planet: Codable {
     }
 }
 
-struct PlanetTopLevelDict: Codable {
-    let results: [Planet]
-}
+//struct PlanetTopLevelDict: Codable {
+//    let results: [Planet]
+//}

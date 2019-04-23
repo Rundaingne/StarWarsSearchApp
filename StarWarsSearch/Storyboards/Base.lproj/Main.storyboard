@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search Page View Controller-->
         <scene sceneID="Vtm-g3-fDd">
             <objects>
-                <viewController id="Xxh-bS-tt6" sceneMemberID="viewController">
+                <viewController id="Xxh-bS-tt6" customClass="SearchPageViewController" customModule="StarWarsSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GrZ-dF-EGq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KZl-xA-3c3">
                                 <rect key="frame" x="0.0" y="124" width="375" height="92"/>
-                                <color key="backgroundColor" red="0.4900711324" green="1" blue="0.37099186610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Q2-Xn-EdW">
                                     <size key="itemSize" width="115" height="91"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -32,32 +32,33 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCriteriaCell" id="oKc-R8-m9c">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="IZg-HH-rk3" customClass="SearchableObjectCollectionViewCell" customModule="StarWarsSearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.66666666666666663" width="115" height="91"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="115" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgX-wr-3dQ">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnn-rC-FPo">
                                                     <rect key="frame" x="0.0" y="-12" width="115" height="115"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="FgX-wr-3dQ" secondAttribute="height" multiplier="1:1" id="JTK-sv-0t2"/>
+                                                        <constraint firstAttribute="width" secondItem="xnn-rC-FPo" secondAttribute="height" multiplier="1:1" id="jyY-8M-itC"/>
                                                     </constraints>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Venus" translatesAutoresizingMaskIntoConstraints="NO" id="s2N-TG-Ndb">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PersonImage" translatesAutoresizingMaskIntoConstraints="NO" id="1TK-eC-3Vv">
                                                     <rect key="frame" x="0.0" y="-12" width="115" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="FgX-wr-3dQ" firstAttribute="width" secondItem="oKc-R8-m9c" secondAttribute="width" id="C1q-3T-88x"/>
-                                            <constraint firstItem="FgX-wr-3dQ" firstAttribute="centerX" secondItem="oKc-R8-m9c" secondAttribute="centerX" id="a5u-g7-dn0"/>
-                                            <constraint firstItem="FgX-wr-3dQ" firstAttribute="centerY" secondItem="oKc-R8-m9c" secondAttribute="centerY" id="fjR-z1-N0P"/>
+                                            <constraint firstItem="xnn-rC-FPo" firstAttribute="centerX" secondItem="IZg-HH-rk3" secondAttribute="centerX" id="6eG-rR-v9w"/>
+                                            <constraint firstItem="xnn-rC-FPo" firstAttribute="centerY" secondItem="IZg-HH-rk3" secondAttribute="centerY" id="NUg-Af-qBX"/>
+                                            <constraint firstItem="xnn-rC-FPo" firstAttribute="width" secondItem="IZg-HH-rk3" secondAttribute="width" id="dgf-ih-n1F"/>
                                         </constraints>
+                                        <viewLayoutGuide key="safeArea" id="lKt-CT-EdV"/>
                                         <connections>
-                                            <outlet property="imageView" destination="s2N-TG-Ndb" id="HK3-8O-xpn"/>
+                                            <outlet property="objectTypeImageView" destination="1TK-eC-3Vv" id="B60-6p-GvA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -122,16 +123,17 @@
                         <viewLayoutGuide key="safeArea" id="og7-ew-JB7"/>
                     </view>
                     <connections>
-                        <outlet property="searchCriteriaCollectionView" destination="KZl-xA-3c3" id="Ded-4x-IZO"/>
-                        <outlet property="searchResultsTableView" destination="XTQ-9c-Ysk" id="R7P-Uk-tLK"/>
+                        <outlet property="searchResultsTableView" destination="XTQ-9c-Ysk" id="53D-de-Fcs"/>
+                        <outlet property="searchableObjectsCollectionView" destination="KZl-xA-3c3" id="0Qp-Ez-Lop"/>
+                        <outlet property="starWarsSearchBar" destination="Xpr-Jk-dKt" id="byS-0U-QV4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pdf-eg-l5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="217"/>
+            <point key="canvasLocation" x="23" y="183"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Venus" width="32" height="32"/>
+        <image name="PersonImage" width="1500" height="1500"/>
     </resources>
 </document>

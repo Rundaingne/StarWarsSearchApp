@@ -11,32 +11,43 @@
 import UIKit
 
 class SearchPageViewController: UIViewController, UITableViewDataSource, UICollectionViewDataSource {
-
+    
+    //MARK: -IBOutlets
+    @IBOutlet weak var starWarsSearchBar: UISearchBar!
+    @IBOutlet weak var searchableObjectsCollectionView: UICollectionView!
+    @IBOutlet weak var searchResultsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        starWarsSearchBar.delegate = self
+        searchableObjectsCollectionView.dataSource = self
+        searchResultsTableView.dataSource = self
     }
     
-    //MARK: -TableView data source functions
+    let objectTypes: [SearchCategory] = [.person, .planet, .starship, .vehicle]
+    var object: SearchableObject?
+    
+    //MARK: -DataSource functions
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return objectTypes.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchCell", for: indexPath) as! SearchableObjectCollectionViewCell
+        let objectType = objectTypes[indexPath.row]
+        cell.updateViews(with: objectType)
+        return cell
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-
-    //MARK: -CollectionView data source functions
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        return 0
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchResultsCell", for: indexPath)
+        
+        return cell
+    }
 
     /*
     // MARK: - Navigation
@@ -49,3 +60,10 @@ class SearchPageViewController: UIViewController, UITableViewDataSource, UIColle
     */
 
 }
+
+extension SearchPageViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //When the text in the search bar changes, I need to...call the appropriate fetch function. Which means I will have to switch on the button that was pressed. Oh boy, wow. I will implement this later.
+    }
+}
+

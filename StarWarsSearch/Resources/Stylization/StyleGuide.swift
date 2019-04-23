@@ -15,5 +15,12 @@ extension UIView {
         self.layer.masksToBounds = true
         self.layer.cornerRadius = radius
     }
-    
+}
+
+extension UIImageView {
+    func roundImage(_ radius: CGFloat = 8) {
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = radius
+        
+    }
 }

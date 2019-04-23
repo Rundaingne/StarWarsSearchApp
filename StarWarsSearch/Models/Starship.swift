@@ -6,9 +6,9 @@
 //  Copyright © 2019 Rund LLC. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Starship: Codable {
+class Starship: SearchableObject, Codable {
     
     let name: String
     let hyperdriveRating: String
@@ -30,6 +30,6 @@ class Starship: Codable {
     }
 }
 
-struct StarShipTopLevelDict: Codable {
-    let results: [Starship]
-}
+//struct StarShipTopLevelDict: Codable {
+//    let results: [Starship]
+//}

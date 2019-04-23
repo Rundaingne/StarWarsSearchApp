@@ -6,9 +6,11 @@
 //  Copyright © 2019 Rund LLC. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Person: Codable {
+class Person: SearchableObject, Codable {
+    
+    //Instance Properties
     let name: String
     let height: String
     let mass: String
@@ -29,6 +31,6 @@ class Person: Codable {
     }
 }
 
-struct PersonTopLevelDict: Codable {
-    let results: [Person]
+struct TopLevelDict<T: SearchableObject>: Codable {
+    let results: [T]
 }

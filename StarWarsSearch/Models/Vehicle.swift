@@ -6,9 +6,9 @@
 //  Copyright © 2019 Rund LLC. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Vehicle: Codable {
+class Vehicle: SearchableObject, Codable {
     
     let name: String
     let model: String
@@ -27,6 +27,6 @@ class Vehicle: Codable {
     }
 }
 
-struct VehicleTopLevelDict: Codable {
-    let results: [Vehicle]
-}
+//struct VehicleTopLevelDict: Codable {
+//    let results: [Vehicle]
+//}
