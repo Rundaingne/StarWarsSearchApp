@@ -11,8 +11,8 @@ import UIKit
 class Vehicle: SearchableObject, Codable {
     
     let name: String
-    let model: String
-    let vehicleClass: String
+    let model: String?
+    let vehicleClass: String?
     
     init(name: String, model: String, vehicleClass: String) {
         self.name = name

@@ -39,23 +39,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="115" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnn-rC-FPo">
-                                                    <rect key="frame" x="0.0" y="-12" width="115" height="115"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="xnn-rC-FPo" secondAttribute="height" multiplier="1:1" id="jyY-8M-itC"/>
-                                                    </constraints>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PersonImage" translatesAutoresizingMaskIntoConstraints="NO" id="1TK-eC-3Vv">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1TK-eC-3Vv">
                                                     <rect key="frame" x="0.0" y="-12" width="115" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="xnn-rC-FPo" firstAttribute="centerX" secondItem="IZg-HH-rk3" secondAttribute="centerX" id="6eG-rR-v9w"/>
-                                            <constraint firstItem="xnn-rC-FPo" firstAttribute="centerY" secondItem="IZg-HH-rk3" secondAttribute="centerY" id="NUg-Af-qBX"/>
-                                            <constraint firstItem="xnn-rC-FPo" firstAttribute="width" secondItem="IZg-HH-rk3" secondAttribute="width" id="dgf-ih-n1F"/>
-                                        </constraints>
                                         <viewLayoutGuide key="safeArea" id="lKt-CT-EdV"/>
                                         <connections>
                                             <outlet property="objectTypeImageView" destination="1TK-eC-3Vv" id="B60-6p-GvA"/>
@@ -91,12 +80,21 @@
                                 <rect key="frame" x="0.0" y="317.66666666666674" width="375" height="460.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultsCell" rowHeight="244" id="6fb-2M-N8M">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultsCell" textLabel="JuG-LB-72v" rowHeight="244" style="IBUITableViewCellStyleDefault" id="6fb-2M-N8M">
                                         <rect key="frame" x="0.0" y="28" width="375" height="244"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6fb-2M-N8M" id="mjT-Qv-O3O">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="243.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JuG-LB-72v">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="243.66666666666666"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.4900711324" green="1" blue="0.37099186610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -133,7 +131,4 @@
             <point key="canvasLocation" x="23" y="183"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="PersonImage" width="1500" height="1500"/>
-    </resources>
 </document>

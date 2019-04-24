@@ -13,8 +13,22 @@ protocol SearchableObject: Codable {
 import Foundation
 
 enum SearchCategory: String {
-    case person = "People"
-    case starship = "Starships"
-    case vehicle = "Vehicles"
-    case planet = "Planets"
+    case person = "people"
+    case starship = "starships"
+    case vehicle = "vehicles"
+    case planet = "planets"
+    
+    var objectType: SearchableObject.Type {
+        switch self {
+        case .person:
+            return Person.self
+        case .planet:
+            return Planet.self
+        case .starship:
+            return Starship.self
+        case .vehicle:
+            return Vehicle.self
+            
+        }
+    }
 }

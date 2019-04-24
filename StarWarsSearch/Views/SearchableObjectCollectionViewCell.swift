@@ -11,7 +11,7 @@ import UIKit
 class SearchableObjectCollectionViewCell: UICollectionViewCell {
     
     //MARK: -IBOutlets
-    @IBOutlet weak var objectTypeImageView: UIImageView!
+    @IBOutlet weak var objectTypeImageView: RoundImage!
     
     //MARK: -Methods
     

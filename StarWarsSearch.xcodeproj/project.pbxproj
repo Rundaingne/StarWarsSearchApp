@@ -91,12 +91,11 @@
 			children = (
 				F76B74DA22694A22008BCC89 /* Extensions */,
 				F76B74BA2268F1B2008BCC89 /* Notes.swift */,
-				F76B74BC2268F36F008BCC89 /* Model Controllers */,
+				F7CC7317226FC48C00C5D45C /* Controllers */,
 				F76B74732268EBE7008BCC89 /* Models */,
 				F77CD1C72268DEF800CA59DF /* Views */,
 				F71A22482267D10000C2F0B1 /* Storyboards */,
 				F71A22472267D0EE00C2F0B1 /* Resources */,
-				F77CD1C62268DEE800CA59DF /* View Controllers */,
 				F76B74D1226910D5008BCC89 /* constants.swift */,
 			);
 			path = StarWarsSearch;
@@ -185,6 +184,15 @@
 				F7CC72E1226B9CF400C5D45C /* SearchableObjectCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F7CC7317226FC48C00C5D45C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F76B74BC2268F36F008BCC89 /* Model Controllers */,
+				F77CD1C62268DEE800CA59DF /* View Controllers */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

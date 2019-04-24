@@ -11,11 +11,11 @@ import UIKit
 class Starship: SearchableObject, Codable {
     
     let name: String
-    let hyperdriveRating: String
-    let starShipClass: String
-    let cost: String
+    let hyperdriveRating: String?
+    let starShipClass: String?
+    let cost: String?
     
-    init(name: String, hyperdriveRating: String, starShipClass: String, cost: String) {
+    init(name: String, hyperdriveRating: String?, starShipClass: String?, cost: String?) {
         self.name = name
         self.hyperdriveRating = hyperdriveRating
         self.starShipClass = starShipClass

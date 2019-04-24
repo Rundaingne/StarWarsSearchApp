@@ -14,9 +14,9 @@ class Person: SearchableObject, Codable {
     let name: String
     let height: String
     let mass: String
-    let birthYear: String
+    let birthYear: String?
     
-    init(name: String, height: String, mass: String, birthYear: String) {
+    init(name: String, height: String, mass: String, birthYear: String?) {
         self.name = name
         self.height = height
         self.mass = mass

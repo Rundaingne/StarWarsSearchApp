@@ -9,10 +9,10 @@
 import Foundation
 
 class SearchableObjectController {
-    static let shared = SearchPageViewController()
+    static let shared = SearchableObjectController()
     private init() {}
     
-    func searchObject<T: SearchableObject>(with searchCategory: SearchCategory, searchTerm: String, completion: @escaping ([T]?) -> Void) {
+    func searchObject<T: SearchableObject>(with searchCategory: SearchCategory, returnType: T.Type, searchTerm: String, completion: @escaping ([SearchableObject]?) -> Void) {
         guard var url = Constants.baseURL else {completion(nil); return}
         url.appendPathComponent(searchCategory.rawValue)
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
@@ -20,6 +20,7 @@ class SearchableObjectController {
         urlComponents?.queryItems = [personQueryItem]
         guard let requestURL = urlComponents?.url else {completion(nil); return}
         let request = URLRequest(url: requestURL)
+        print(request.url?.absoluteString ?? "NOPE")
         URLSession.shared.dataTask(with: request) { (data, _, error) in
             do {
                 if let error = error {
