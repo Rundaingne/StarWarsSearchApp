@@ -12,7 +12,8 @@ class RoundImage: UIImageView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.addCornerRadius(16)
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = self.frame.size.width / 2.0
     }
     
 }

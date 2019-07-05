@@ -20,11 +20,12 @@ class SearchPageViewController: UIViewController, UITableViewDataSource, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         starWarsSearchBar.delegate = self
+        searchableObjectsCollectionView.backgroundColor = .clear
         searchableObjectsCollectionView.dataSource = self
         searchResultsTableView.dataSource = self
         searchableObjectsCollectionView.delegate = self
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "milkyway")!)
-        searchResultsTableView.backgroundColor = self.view.backgroundColor
+        searchResultsTableView.backgroundColor = .clear
         SearchableObjectController.shared.searchObject(with: .person, returnType: Person.self, searchTerm: "") { (people) in
             DispatchQueue.main.async {
                 guard let people = people else {return}
@@ -58,7 +59,7 @@ class SearchPageViewController: UIViewController, UITableViewDataSource, UIColle
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchResultsCell", for: indexPath)
         let object = objects[indexPath.row]
         cell.textLabel?.text = object.name
-        cell.backgroundColor = self.view.backgroundColor
+        cell.backgroundColor = .clear
         cell.selectionStyle = .none
         return cell
     }

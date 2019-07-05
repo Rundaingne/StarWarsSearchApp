@@ -19,10 +19,6 @@
 		F76B74C42268F809008BCC89 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74C32268F809008BCC89 /* Vehicle.swift */; };
 		F76B74C62268F814008BCC89 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74C52268F814008BCC89 /* Planet.swift */; };
 		F76B74C82268F82D008BCC89 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74C72268F82D008BCC89 /* Species.swift */; };
-		F76B74CA22690C56008BCC89 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74C922690C56008BCC89 /* PersonController.swift */; };
-		F76B74CC22690C6A008BCC89 /* StarshipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74CB22690C6A008BCC89 /* StarshipController.swift */; };
-		F76B74CE22690C78008BCC89 /* VehicleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74CD22690C78008BCC89 /* VehicleController.swift */; };
-		F76B74D022690C88008BCC89 /* PlanetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74CF22690C88008BCC89 /* PlanetController.swift */; };
 		F76B74D2226910D5008BCC89 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74D1226910D5008BCC89 /* constants.swift */; };
 		F76B74D622692156008BCC89 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76B74D522692156008BCC89 /* Default-568h@2x.png */; };
 		F76B74DE22694BFF008BCC89 /* SearchableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76B74DD22694BFF008BCC89 /* SearchableObject.swift */; };
@@ -46,10 +42,6 @@
 		F76B74C32268F809008BCC89 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		F76B74C52268F814008BCC89 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		F76B74C72268F82D008BCC89 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
-		F76B74C922690C56008BCC89 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
-		F76B74CB22690C6A008BCC89 /* StarshipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipController.swift; sourceTree = "<group>"; };
-		F76B74CD22690C78008BCC89 /* VehicleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleController.swift; sourceTree = "<group>"; };
-		F76B74CF22690C88008BCC89 /* PlanetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetController.swift; sourceTree = "<group>"; };
 		F76B74D1226910D5008BCC89 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		F76B74D522692156008BCC89 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F76B74DD22694BFF008BCC89 /* SearchableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableObject.swift; sourceTree = "<group>"; };
@@ -147,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				F76B74DF22694D59008BCC89 /* SearchableObjectController.swift */,
-				F76B74E32269565B008BCC89 /* LegacyControllers */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -157,17 +148,6 @@
 			children = (
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F76B74E32269565B008BCC89 /* LegacyControllers */ = {
-			isa = PBXGroup;
-			children = (
-				F76B74C922690C56008BCC89 /* PersonController.swift */,
-				F76B74CB22690C6A008BCC89 /* StarshipController.swift */,
-				F76B74CD22690C78008BCC89 /* VehicleController.swift */,
-				F76B74CF22690C88008BCC89 /* PlanetController.swift */,
-			);
-			path = LegacyControllers;
 			sourceTree = "<group>";
 		};
 		F77CD1C62268DEE800CA59DF /* View Controllers */ = {
@@ -277,13 +257,9 @@
 				F76B74C62268F814008BCC89 /* Planet.swift in Sources */,
 				F76B74E022694D59008BCC89 /* SearchableObjectController.swift in Sources */,
 				F71A22362267D04C00C2F0B1 /* AppDelegate.swift in Sources */,
-				F76B74CC22690C6A008BCC89 /* StarshipController.swift in Sources */,
-				F76B74CE22690C78008BCC89 /* VehicleController.swift in Sources */,
-				F76B74D022690C88008BCC89 /* PlanetController.swift in Sources */,
 				F76B74C42268F809008BCC89 /* Vehicle.swift in Sources */,
 				F76B74C02268F7D5008BCC89 /* Starship.swift in Sources */,
 				F76B74C82268F82D008BCC89 /* Species.swift in Sources */,
-				F76B74CA22690C56008BCC89 /* PersonController.swift in Sources */,
 				F76B74BB2268F1B2008BCC89 /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

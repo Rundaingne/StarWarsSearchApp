@@ -18,5 +18,6 @@ class SearchableObjectCollectionViewCell: UICollectionViewCell {
     func updateViews(with searchCategory: SearchCategory) {
         let category = searchCategory.rawValue
         objectTypeImageView.image = UIImage(named: category)
+        self.backgroundColor = .clear
     }
 }
